@@ -32,11 +32,11 @@ namespace appTest
                 {
                     if (fileEntries.Contains(ConfigurationManager.AppSettings.Get("CheckingFolderPath") + fileName2))
                     {
-                        status += fileName2 + "  _____________ Exist\n";
+                        status += ConfigurationManager.AppSettings.Get("CheckingFolderPath") + fileName2 + "  _____________ Exist\n";
                     }
                     else
                     {
-                        status += fileName2 + "  _____________ Not Exist\n";
+                        status += ConfigurationManager.AppSettings.Get("CheckingFolderPath") +  fileName2 + "  _____________ Not Exist\n";
                     }
                 }
                 writeFile(status);
