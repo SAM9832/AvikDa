@@ -30,13 +30,13 @@ namespace appTest
                 }
                 foreach (string fileName2 in fileName)
                 {
-                    if (fileEntries.Contains(fileName2))
+                    if (fileEntries.Contains(ConfigurationManager.AppSettings.Get("CheckingFolderPath") + fileName2))
                     {
                         status += fileName2 + "  _____________ Exist\n";
                     }
                     else
                     {
-                        status += fileName2 + "  _____________Not Exist\n";
+                        status += fileName2 + "  _____________ Not Exist\n";
                     }
                 }
                 writeFile(status);
